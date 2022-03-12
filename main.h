@@ -18,8 +18,7 @@ int print_char(va_list args);
 int print_str(va_list args);
 int print_percent(va_list args);
 int _printf(const char *format, ...);
-int _putchar(char c);
 int _strlen(const char *s);
 
 
-#ifndef /* MAIN_H */
+#endif /* MAIN_H */
