@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _printf -  a function produces output according to a format
  * @format: string to print, may containt char or format specifiers
@@ -16,11 +15,10 @@ int _printf(const char *format, ...)
 		{"c", print_char},
 		{"s", print_str},
 		{"%", print_percent},
-//		{"d", print_base10_num},
-//		{"i", print_int},
+/*		{"d", print_base10_num},
+		{"i", print_int},*/
 		{NULL, NULL}
 	};
-
 /* check if no format was given then stop and return -1 */
 	if (format == NULL)
 		return (-1);
@@ -54,8 +52,8 @@ int _printf(const char *format, ...)
 				/* check if next char is part of the list of specifier */
 			        while ((specifier[j].character) != NULL)
 				{
-					if (*(specifiers[j].character) == format[i])
-						len = specifiers[j].type_to_print(ap);
+					if (*(specifier[j].character) == format[i])
+						len = specifier[j].type_to_print(ap);
 					if (*(specifier[j].character) == format[i])
 						len+= specifier[j].type_to_print(ap);
 				}
