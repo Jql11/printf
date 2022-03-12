@@ -55,7 +55,7 @@ int _printf(const char *format, ...)
 			        while (*(specifiers[j].character) != NULL)
 				{
 					if (*(specifiers[j].character) == format[i])
-						len+= specifiers[j].type_to_print(ap);
+						len = specifiers[j].type_to_print(ap);
 				}
 				j++;
 			}
