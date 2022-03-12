@@ -28,7 +28,7 @@ int print_str(va_list ap)
 		_putchar(str[i]);
 		i++;
 	}
-	return (1);
+	return (i);
 }
 /**
   *print_percent: print percent
@@ -40,10 +40,10 @@ int print_percent(__attribute__((unused))va_list ap)
 	return (1);
 }
 /**
-  *print_unsigned_num: print signed number;
+  *print_signed_num: print signed number;
   *@ap: arguments
   */
-int print_unsigned_num(va_list ap)
+int print_signed_num(va_list ap)
 {
 	int n;
 
