@@ -13,11 +13,11 @@ int _printf(const char *format, ...)
 	len = 0;
 
 	t_modifier specifier[] = {
-		{"c", print_char}
-		{"s", print_str}
-		{"%", print_percent}
-		{"d", print_base10_num}
-		{"i", print_int}
+		{"c", print_char},
+		{"s", print_str},
+		{"%", print_percent},
+//		{"d", print_base10_num},
+//		{"i", print_int},
 		{NULL, NULL}
 	};
 
@@ -27,17 +27,17 @@ int _printf(const char *format, ...)
 
 	va_start(ap, format);
 	/* start moving through the format */
-	for (i = O; format[i] != '\0'; i++)
+	for (i = 0; format[i] != '\0'; i++)
 	{
 		/* incremeanting len to return as it does */
 		len++;
 
-		if (format[i] != %)
+		if (format[i] != '%')
 		{
 		        _putchar(format[i]);
 		}
 		/* check for % and it finds one */
-		if (format[i] == %)
+		if (format[i] == '%')
 		{
 			/* check if next char is end of string and return */
 			if (format[i + 1] == '\0')
@@ -52,10 +52,12 @@ int _printf(const char *format, ...)
 				j = 0;
 
 				/* check if next char is part of the list of specifier */
-			        while (*(specifiers[j].character) != NULL)
+			        while ((specifier[j].character) != NULL)
 				{
 					if (*(specifiers[j].character) == format[i])
 						len = specifiers[j].type_to_print(ap);
+					if (*(specifier[j].character) == format[i])
+						len+= specifier[j].type_to_print(ap);
 				}
 				j++;
 			}
