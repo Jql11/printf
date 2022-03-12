@@ -7,14 +7,14 @@
 
 typedef struct modifiers
 {
-	char *specifier;
-	int *(*f)(va_list ap);
-} conversion_specifiers;
+	char *character;
+	int (*type_to_print)(va_list ap);
+} t_modifier;
 
 
 int _printf(const char *format, ...);
-
-/* print numbers */
+int _putchar(char c);
+int _strlen(const char *s);
 
 
 
