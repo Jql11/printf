@@ -53,8 +53,6 @@ int _printf(const char *format, ...)
 			        while ((specifier[j].character) != NULL)
 				{
 					if (*(specifier[j].character) == format[i])
-						len = specifier[j].type_to_print(ap);
-					if (*(specifier[j].character) == format[i])
 						len+= specifier[j].type_to_print(ap);
 				}
 				j++;
