@@ -20,6 +20,6 @@ int print_percent(va_list args);
 int _printf(const char *format, ...);
 int _putchar(char c);
 int _strlen(const char *s);
-
+int _puts(char *str);
 
 #ifndef /* MAIN_H */
