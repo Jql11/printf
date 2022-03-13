@@ -47,9 +47,9 @@ int print_percent(__attribute__((unused))va_list ap)
 int print_integer(va_list ap)
 {
 	int n = va_arg(ap, int);
-	int length = print_number(n);
+	int length;
 
-	print_number(n);
+	length = print_number(n);
 
 	return (length);
 }
