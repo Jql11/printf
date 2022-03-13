@@ -20,5 +20,7 @@ int print_percent(va_list args);
 int _printf(const char *format, ...);
 int _strlen(char *s);
 int _puts(char *str);
+int _print_rev_recursion(va_list ap);
+
 
 #endif /* MAIN_H */
