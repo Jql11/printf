@@ -40,5 +40,17 @@ int print_percent(__attribute__((unused))va_list ap)
 	return (1);
 }
 
+/**
+  *print_integer: print integer
+  *@a0: arguments
+  */
+int print_integer(va_list ap)
+{
+	int n = va_arg(ap, int);
+	int length = print_number(n);
 
+	print_number(n);
+
+	return (length);
+}
 
