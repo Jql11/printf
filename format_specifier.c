@@ -39,25 +39,18 @@ int print_percent(__attribute__((unused))va_list ap)
 	_putchar('%');
 	return (1);
 }
+
 /**
-  *print_signed_num: print signed number;
-  *@ap: arguments
+  *print_integer: print integer
+  *@a0: arguments
   */
-int print_signed_num(va_list ap)
+int print_integer(va_list ap)
 {
-	int n;
+	int n = va_arg(ap, int);
+	int length = print_number(n);
 
-	n = va_arg(ap, int);
-	if (n < 0)
-	{
-		_putchar(n * -1);
-	}
-	else
-		_putchar(n);
+	print_number(n);
 
-	return (1);
-
+	return (length);
 }
-
-
 
