@@ -56,11 +56,13 @@ int print_number(int n)
 		len = d + 1;
 	}
 	else
+	{
 		for (exp = d - 1; exp >=  0; exp--)
 		{
 			_putchar((n / (myPow(10, exp))) % 10 + '0');
-			len = d;
 		}
+		len = d;
+	}
 	return (len);
 }
 
