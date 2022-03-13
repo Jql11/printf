@@ -7,7 +7,7 @@
 
 typedef struct modifiers
 {
-	char *character;
+	char character;
 	int (*type_to_print)(va_list ap);
 } t_modifier;
 
