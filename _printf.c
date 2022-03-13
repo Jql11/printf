@@ -17,9 +17,9 @@ int _printf(const char *format, ...)
 		{'c', print_char},
 		{'s', print_str},
 /*		{'r', print_rev},
-/*		{'%', print_percent},
-/*		{'d', print_base10_num},
-		{'i', print_int},*/
+/*		{'%', print_percent}, */
+		{'d', print_int},
+		{'i', print_int},
 		{'\0', NULL}
 	};
 /* check if no format was given then stop and return -1 */
