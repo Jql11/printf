@@ -9,52 +9,39 @@
 int _printf(const char *format, ...)
 {
 	va_list ap;
-        int len, i, j;
+	int len = 0, i, j = 0;
 	int (*f)(va_list);
-	len = 0;
-	
+
 	t_modifier specifier[] = {
 		{'c', print_char},
 		{'s', print_str},
-/*		{'r', print_rev},
+/*		{'r', print_rev}, */
 /*		{'%', print_percent}, */
 		{'d', print_int},
 		{'i', print_int},
 		{'\0', NULL}
 	};
-/* check if no format was given then stop and return -1 */
-	if (format == NULL)
+	if (format == NULL) /* check if no format was given then stop and return -1 */
 		return (-1);
 
 	va_start(ap, format);
-	/* start moving through the format */
-	for (i = 0; format[i] != '\0'; i++)
+	for (i = 0; format[i] != '\0'; i++)   	/* start moving through the format */
 	{
-		/* incremeanting len to return as it does */
-		len++;
+		len++;  		/* incremeanting len to return as it does */
 		if (format[i] != '%')
 			_putchar(format[i]);
-
-/* check for % and it finds one */
-		else
+		else /* check for % and it finds one */
 		{
-			/* check if next char is end of string and return */
-			if (format[i + 1] == '\0' || format[i+ 1] == '%')
+			if (format[i + 1] == '\0' || format[i + 1] == '%') /* check if next char is end of string */
 			{
 				_putchar('%');
-				if ( format[i + 1] == '\0')
-					return(len);
-/* move onto the next char because we are still on % and we are to skip/ignore next % */
-				i++;
+				if (format[i + 1] == '\0')
+					return (len);
+				i++; /* move onto the next char because we are still on % and we are to skip/ignore next % */
 			}
-			/* we got % and next char is not null or % */ 
-			else
+			else /* we got % and next char is not null or % */
 			{
-				j = 0;
-/*				printf("Character is %c\n", specifier[j].character);
-				printf("Format is %c", format[i + 1]); */
-				/* check if next char is part of the list of specifier */
-			        while (specifier[j].character != '\0')
+				while (specifier[j].character != '\0') /* check if next char is part of the list of specifier */
 				{
 					if (specifier[j].character == format[i + 1])
 					{
