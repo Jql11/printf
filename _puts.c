@@ -22,7 +22,7 @@ int _strlen(char *s)
  * Return: Always 0.
  */
 
-void _puts(char *str)
+int _puts(char *str)
 {
 	int i;
 	int len = _strlen(str);
@@ -32,5 +32,5 @@ void _puts(char *str)
 		_putchar(str[i]);
 	}
 	_putchar('\n');
-
+	return (0);
 }
