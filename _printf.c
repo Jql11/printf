@@ -16,7 +16,7 @@ int _printf(const char *format, ...)
 	t_modifier specifier[] = {
 		{'c', print_char},
 		{'s', print_str},
-		{'r', _print_rev_recursion},
+/*		{'r', print_rev},
 /*		{'%', print_percent},
 /*		{'d', print_base10_num},
 		{'i', print_int},*/
