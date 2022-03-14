@@ -12,14 +12,14 @@ typedef struct modifiers
 } t_modifier;
 
 
-/* printoutput function */
+int _printf(const char *format, ...);
+int (*spec_struct)(char ch)(va_list);
 int _putchar(char c);
 int print_char(va_list args);
 int print_str(va_list args);
 int print_percent(va_list args);
 int print_int(va_list ap);
 int print_number(int n);
-int _printf(const char *format, ...);
 int _strlen(char *s);
 //int _puts(char *str);
 // int print_rev(va_list ap)
