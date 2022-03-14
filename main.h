@@ -31,6 +31,7 @@ int print_number(int n);
 int _strlen(char *s);
 int print_unsigned_int(va_list ap);
 int print_binary(va_list ap);
+int length_digit(int n);
 /* int _puts(char *str); */
 
 #endif /* MAIN_H */
