@@ -1,0 +1,31 @@
+#include "main.h"
+#include <stdio.h>
+/**
+ * specifier_struct -  a function produces output according to a format
+ * @format: string to print, may containt char or format specifiers
+ *
+ * Return: number of char printed (excluding \0 used to end output to strings)
+ */
+
+int (*spec_struct)(char ch)(va_list)
+{
+	int i;
+
+	t_modifier specifier[] = {
+		{'c', print_char},
+		{'s', print_str},
+/*		{'r', print_rev}, */
+/*		{'%', print_percent}, */
+		{'d', print_int},
+		{'i', print_int},
+		{'\0', NULL}
+	};
+
+	for (i = 0; spec_struct[i].character != '\0'; i++)
+	{
+
+		if (spec_struct[i].character == ch)
+			break;
+	}
+	return (spec_struct[i].type_to_print);
+}

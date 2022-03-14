@@ -9,18 +9,18 @@
 int _printf(const char *format, ...)
 {
 	va_list ap;
-	int len = 0, i, j = 0;
+	int len = 0, i;
 	int (*f)(va_list);
 
-	t_modifier specifier[] = {
+/*	t_modifier specifier[] = {
 		{'c', print_char},
 		{'s', print_str},
 /*		{'r', print_rev}, */
 /*		{'%', print_percent}, */
-		{'d', print_int},
+/*		{'d', print_int},
 		{'i', print_int},
 		{'\0', NULL}
-	};
+	}; */
 	if (format == NULL) /* check if no format was given then stop and return -1 */
 		return (-1);
 
@@ -41,20 +41,20 @@ int _printf(const char *format, ...)
 			}
 			else /* we got % and next char is not null or % */
 			{
-				while (specifier[j].character != '\0') /* check if next char is part of the list of specifier */
+//				while (specifier[j].character != '\0') /* check if next char is part of the list of specifier */
+//				{
+//					if (specifier[j].character == format[i + 1])
+//					{
+				f = spec_struc(format[i + 1]);
+				if (f != NULL)
 				{
-					if (specifier[j].character == format[i + 1])
-					{
-						f = specifier[j].type_to_print;
-						if (f != NULL)
-						{
-							len += f(ap);
-							i++;
-							len = len - 1;
-						}
-					}
-					j++;
+					len += f(ap);
+					i++;
+					len = len - 1;
 				}
+//					}
+//					j++;
+//				}
 			}
 		}
 	}
