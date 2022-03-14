@@ -21,11 +21,11 @@ int (*spec_struct(char ch))(va_list)
 		{'\0', NULL}
 	};
 
-	for (i = 0; spec_struct[i].character != '\0'; i++)
+	for (i = 0; specifier[i].character != '\0'; i++)
 	{
 
-		if (spec_struct[i].character == ch)
+		if (specifier[i].character == ch)
 			break;
 	}
-	return (spec_struct[i].type_to_print);
+	return (specifier[i].type_to_print);
 }
