@@ -5,6 +5,14 @@
 #include <stdarg.h>
 #include <unistd.h>
 
+/**
+ * struct modifier - format specifier's info
+ * @character: char to find
+ * @type_to_print: call function to print right format
+ *
+ * Description: Longer description
+ */
+
 typedef struct modifiers
 {
 	char character;
