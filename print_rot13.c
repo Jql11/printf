@@ -16,8 +16,8 @@ int print_rot(va_list ap)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (s[i] < 'A' || s[i] > 'Z' && s[i] < 'a' || s[i] > 'z')
-			_putchar(s[i]);
+		if (str[i] < 'A' || str[i] > 'Z' && str[i] < 'a' || str[i] > 'z')
+			_putchar(str[i]);
 		else
 		{
 			for (j = 0; j < 52 ; j++)
