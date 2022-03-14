@@ -10,6 +10,14 @@ int convert_binary(int n)
 	int bin = 0;
 	int rem, i = 1;
 
+	if (n < 0)
+	{
+		n = n * -1;
+	}
+	else if (n == 0)
+	{
+		bin = 0;
+	}
 	while (n != 0)
 	{
 		rem = n % 2;
