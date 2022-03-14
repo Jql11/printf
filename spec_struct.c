@@ -19,8 +19,8 @@ int (*spec_struct(char ch))(va_list)
 		{'i', print_int},
 		{'u', print_unsigned_int},
 		{'b', print_binary},
-		{'o', print_oct},
-		{'R', print_rot},
+/*		{'o', print_oct}, */
+/*		{'R', print_rot},*/
 		{'\0', NULL}
 	};
 
