@@ -3,6 +3,7 @@
 /**
   *print_str - print string
   *@ap: arguments
+  *Return: count characters
   */
 int print_str(va_list ap)
 {
@@ -14,7 +15,7 @@ int print_str(va_list ap)
 	if (str == NULL)
 		str = "(nil)";
 
-	while(str[i] != '\0')
+	while (str[i] != '\0')
 	{
 		_putchar(str[i]);
 		i++;

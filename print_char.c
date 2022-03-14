@@ -3,6 +3,7 @@
 /**
   *print_char - print char
   *@ap: arguments
+  *Return: count characters
   */
 int print_char(va_list ap)
 {
