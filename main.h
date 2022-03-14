@@ -21,7 +21,7 @@ int print_int(va_list ap);
 int print_number(int n);
 int _printf(const char *format, ...);
 int _strlen(char *s);
-//int _puts(char *str);
-// int print_rev(va_list ap)
+/*int _puts(char *str);
+int print_rev(va_list ap)*/
 
 #endif /* MAIN_H */
