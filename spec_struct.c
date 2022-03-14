@@ -18,7 +18,7 @@ int (*spec_struct(char ch))(va_list)
 		{'%', print_percent}, 
 		{'d', print_int},
 		{'i', print_int},
-		{'u', print_unsigned_int}
+		{'u', print_unsigned_int},
 		{'\0', NULL}
 	};
 
