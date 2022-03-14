@@ -16,7 +16,7 @@ int convert_binary(int n)
 	}
 	else
 	{
-		while (n != 0)
+		while (n > 0)
 		{
 			rem = n % 2;
 			n /= 2;
@@ -33,7 +33,7 @@ int convert_binary(int n)
   */
 int print_binary(va_list ap)
 {
-	int n = va_arg(ap, int);
+	unsigned int n = va_arg(ap, unsigned int);
 	int length, b;
 
 	b = convert_binary(n);
