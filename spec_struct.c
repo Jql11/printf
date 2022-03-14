@@ -14,7 +14,6 @@ int (*spec_struct(char ch))(va_list)
 	t_modifier specifier[] = {
 		{'c', print_char},
 		{'s', print_str},
-/*		{'r', print_rev}, */
 		{'%', print_percent},
 		{'d', print_int},
 		{'i', print_int},

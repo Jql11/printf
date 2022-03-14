@@ -14,7 +14,7 @@ int main(void)
     unsigned int ui;
 
     ui = (unsigned int)INT_MAX + 1024;
-    
+
     len = _printf("Let's try to printf a simple sentence.\n");
     len2 = printf("Let's try to printf a simple sentence.\n");
     len2 = printf("Percent:[%%]\n");
@@ -32,4 +32,3 @@ int main(void)
 
     return (0);
 }
-
