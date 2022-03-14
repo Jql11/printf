@@ -5,39 +5,26 @@
   *@n: integer
   *Return: binary number
   */
-int convert_binary(int n)
+int print_binary(va_list ap)
 {
+	unsigned int n;
 	int bin = 0;
 	int rem, i = 1;
 
+	n = va_arg(ap, unsigned int);
+
 	if (n == 0)
 	{
-		bin = 0;
+		_putchar('0');
+		return (1);
 	}
-	else
+	while (n > 0)
 	{
-		while (n > 0)
-		{
 			rem = n % 2;
 			n /= 2;
 			bin += rem * i;
 			i *= 10;
-		}
 	}
-	return (bin);
+	return (print_number(bin));
 }
-/**
-  *print_binary - print binary
-  *@ap: arguments
-  *Return: count character
-  */
-int print_binary(va_list ap)
-{
-	unsigned int n = va_arg(ap, unsigned int);
-	int length, b;
 
-	b = convert_binary(n);
-
-	length = print_number(b);
-	return (length);
-}
