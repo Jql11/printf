@@ -23,13 +23,14 @@ typedef struct modifiers
 int _printf(const char *format, ...);
 int (*spec_struct(char ch))(va_list);
 int _putchar(char c);
-int print_char(va_list args);
-int print_str(va_list args);
-int print_percent(va_list args);
+int print_char(va_list ap);
+int print_str(va_list ap);
+int print_percent(va_list ap);
 int print_int(va_list ap);
 int print_number(int n);
 int _strlen(char *s);
 int print_unsigned_int(va_list ap);
+int print_binary(va_list ap);
 /* int _puts(char *str); */
 
 #endif /* MAIN_H */
