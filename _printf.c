@@ -12,39 +12,26 @@ int _printf(const char *format, ...)
 	int len = 0, i;
 	int (*f)(va_list);
 
-/*	t_modifier specifier[] = {
-		{'c', print_char},
-		{'s', print_str},
-/*		{'r', print_rev}, */
-/*		{'%', print_percent}, */
-/*		{'d', print_int},
-		{'i', print_int},
-		{'\0', NULL}
-	}; */
-	if (format == NULL) /* check if no format was given then stop and return -1 */
+	if (format == NULL) /* check if no format and return -1 */
 		return (-1);
 
 	va_start(ap, format);
-	for (i = 0; format[i] != '\0'; i++)   	/* start moving through the format */
+	for (i = 0; format[i] != '\0'; i++)/* start moving through the format */
 	{
-		len++;  		/* incremeanting len to return as it does */
+		len++; /* incremeanting len for return */
 		if (format[i] != '%')
 			_putchar(format[i]);
 		else /* check for % and it finds one */
-		{
-			if (format[i + 1] == '\0' || format[i + 1] == '%') /* check if next char is end of string */
+		{  /* check if next char is end of string */
+			if (format[i + 1] == '\0' || format[i + 1] == '%')
 			{
 				_putchar('%');
 				if (format[i + 1] == '\0')
 					return (len);
-				i++; /* move onto the next char because we are still on % and we are to skip/ignore next % */
+				i++; /* frm % skip to next char to ignore 2nd%*/
 			}
 			else /* we got % and next char is not null or % */
 			{
-//				while (specifier[j].character != '\0') /* check if next char is part of the list of specifier */
-//				{
-//					if (specifier[j].character == format[i + 1])
-//					{
 				f = spec_struct(format[i + 1]);
 				if (f != NULL)
 				{
@@ -52,9 +39,6 @@ int _printf(const char *format, ...)
 					i++;
 					len = len - 1;
 				}
-//					}
-//					j++;
-//				}
 			}
 		}
 	}
