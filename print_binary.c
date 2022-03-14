@@ -10,20 +10,19 @@ int convert_binary(int n)
 	int bin = 0;
 	int rem, i = 1;
 
-	if (n < 0)
-	{
-		n = n * -1;
-	}
-	else if (n == 0)
+	if (n == 0)
 	{
 		bin = 0;
 	}
-	while (n != 0)
+	else
 	{
-		rem = n % 2;
-		n /= 2;
-		bin += rem * i;
-		i *= 10;
+		while (n != 0)
+		{
+			rem = n % 2;
+			n /= 2;
+			bin += rem * i;
+			i *= 10;
+		}
 	}
 	return (bin);
 }
