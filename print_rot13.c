@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * print_rot13 - print the rot13'ed string
+ * print_rot - print the rot13'ed string
  * @ap: arguments
  *
  * Return: number of chars printed
  */
 
-int print_rot (va_list ap)
+int print_rot(va_list ap)
 {
 	char *str = va_arg(ap, char *);
 	char *a = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
