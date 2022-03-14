@@ -6,7 +6,7 @@
 #include <unistd.h>
 
 /**
- * struct modifier - format specifier's info
+ * struct modifiers - format specifier's info
  * @character: char to find
  * @type_to_print: call function to print right format
  *
