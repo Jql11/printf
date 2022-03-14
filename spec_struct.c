@@ -1,13 +1,13 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * specifier_struct -  a function produces output according to a format
- * @format: string to print, may containt char or format specifiers
+ * spec_struct -  checks if format specifier has been found
+ * @ch: char to be checked
  *
- * Return: number of char printed (excluding \0 used to end output to strings)
+ * Return: pointer to a function to print correct format
  */
 
-int (*spec_struct)(char ch)(va_list)
+int (*spec_struct(char ch))(va_list)
 {
 	int i;
 

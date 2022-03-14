@@ -13,7 +13,7 @@ typedef struct modifiers
 
 
 int _printf(const char *format, ...);
-int (*spec_struct)(char ch)(va_list);
+int (*spec_struct(char ch))(va_list);
 int _putchar(char c);
 int print_char(va_list args);
 int print_str(va_list args);

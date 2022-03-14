@@ -45,7 +45,7 @@ int _printf(const char *format, ...)
 //				{
 //					if (specifier[j].character == format[i + 1])
 //					{
-				f = spec_struc(format[i + 1]);
+				f = spec_struct(format[i + 1]);
 				if (f != NULL)
 				{
 					len += f(ap);
