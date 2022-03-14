@@ -42,10 +42,13 @@ int print_number(int n)
 {
 	int d = length_digit(n);
 	int exp;
-	int len;
+	int len = 0;
 
 	if (n == 0)
+	{
 		_putchar('0');
+		len = 1;
+	}
 	else if (n < 0)
 	{
 		_putchar('-');
@@ -65,9 +68,8 @@ int print_number(int n)
 	}
 	return (len);
 }
-
 /**
-  *print_int- print integer
+  *print_int - print integer
   *@ap: arguments
   *Return: count characters
   */
@@ -75,6 +77,20 @@ int print_int(va_list ap)
 {
 	int n = va_arg(ap, int);
 	int length;
+
+	length = print_number(n);
+
+	return (length);
+}
+/**
+  *print_unsigned_int- print 0 or positive integer
+  *@ap: arguments
+  *Return: count characters
+  */
+int print_unsigned_int(va_list ap)
+{
+	unsigned int n = va_arg(ap, int);
+	unsigned int length;
 
 	length = print_number(n);
 

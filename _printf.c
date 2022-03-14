@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 			_putchar(format[i]);
 		else /* check for % and it finds one */
 		{  /* check if next char is end of string */
-			if (format[i + 1] == '\0' || format[i + 1] == '%')
+			if (format[i + 1] == '\0')
 			{
 				_putchar('%');
 				if (format[i + 1] == '\0')
