@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <math.h>
-#include <stdarg.h>
 /**
   *convert_binary - print binary
   *@n: integer
@@ -8,7 +7,7 @@
   */
 int convert_binary(int n) 
 {
-  long bin = 0;
+  int bin = 0;
   int rem, i = 1;
 
   while (n!=0) {
@@ -32,6 +31,6 @@ int print_binary(va_list ap)
 
 	b = convert_binary(n);
 
-	length = length_digit(b);
+	length = print_number(b);
 	return (length);
 }
