@@ -16,7 +16,7 @@ int convert_binary(int n)
 	}
 	else
 	{
-		while (n != 0)
+		while (n > 0)
 		{
 			rem = n % 2;
 			n /= 2;
