@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <math.h>
+#include "main.h"
 /**
   *convert_binary - print binary
   *@n: integer
