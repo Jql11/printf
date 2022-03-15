@@ -35,6 +35,11 @@ int print_hex_cap(va_list ap)
 	}
 	return (i);
 }
+/**
+  *print_hex_low - print hex with lower letter
+  *@ap: integer
+  *Return: count hex number
+  */
 int print_hex_low(va_list ap)
 {
 	unsigned int n;
@@ -48,8 +53,8 @@ int print_hex_low(va_list ap)
 	}
 	while (n > 0)
 	{
-		rem[i] = n % 2;
-		n /= 2;
+		rem[i] = n % 16;
+		n /= 16;
 		i++;
 	}
 	j = i - 1;
