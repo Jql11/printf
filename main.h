@@ -33,8 +33,6 @@ int print_unsigned_int(va_list ap);
 int print_binary(va_list ap);
 int print_oct(va_list ap);
 int print_rot (va_list ap);
-int print_rot(va_list ap);
 int print_rev(va_list ap);
-/* int _puts(char *str); */
 
 #endif /* MAIN_H */
