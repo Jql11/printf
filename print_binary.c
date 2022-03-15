@@ -8,24 +8,20 @@
 int print_binary(va_list ap)
 {
 	unsigned int n;
-	int rem[32], i = 0;
+	int bin = 0;
+	int rem, i = 1;
 	n = va_arg(ap, unsigned int);
 	if (n == 0)
 	{
-		_putchar('0');
+		_putchar(‘0’);
 		return (1);
 	}
 	while (n > 0)
 	{
-			rem[i] = n % 2;
+			rem = n % 2;
 			n /= 2;
-			i++;
+			bin += rem * i;
+			i *= 10;
 	}
-	i = i - 1;
-	while (i >= 0)
-	{
-		_putchar(rem[i] + '0');
-		i--;
-	}
-	return (i);
+	return (print_number(bin));
 }
