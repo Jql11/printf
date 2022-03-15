@@ -8,10 +8,8 @@
 int print_binary(va_list ap)
 {
 	unsigned int n;
-	int rem[10], i = 0;
-
+	int rem[32], i = 0;
 	n = va_arg(ap, unsigned int);
-
 	if (n == 0)
 	{
 		_putchar('0');
@@ -31,4 +29,3 @@ int print_binary(va_list ap)
 	}
 	return (i);
 }
-
