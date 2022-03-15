@@ -34,5 +34,6 @@ int print_binary(va_list ap);
 int print_oct(va_list ap);
 int print_rot (va_list ap);
 int print_rev(va_list ap);
-
+int print_hex_cap(va_list ap);
+int print_hex_low(va_list ap);
 #endif /* MAIN_H */

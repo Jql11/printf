@@ -22,6 +22,8 @@ int (*spec_struct(char ch))(va_list)
 		{'o', print_oct},
 		{'r', print_rev},
 		{'R', print_rot},
+		{'x', print_hex_low},
+		{'X', print_hex_cap},
 		{'\0', NULL}
 	};
 
