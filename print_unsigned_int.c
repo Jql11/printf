@@ -1,5 +1,9 @@
 #include "main.h"
-
+/**
+  *print_unsigned_int - print positive and 0 value
+  *@ap: integer
+  *Return: count number
+  */
 int print_unsigned_int(va_list ap)
 {
 	unsigned int n;
