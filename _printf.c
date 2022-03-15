@@ -20,16 +20,17 @@ int _printf(const char *format, ...)
 	{
 		len++; /* incremeanting len for return */
 		if (format[i] != '%')
+		{
 			_putchar(format[i]);
+		}
 		else /* check for % and it finds one */
 		{  /* check if next char is end of string */
 			if (format[i + 1] == '\0')
 			{
-				_putchar('%');
-				if (format[i + 1] == '\0')
-					return (len);
-				i++; /* frm % skip to next char to ignore 2nd%*/
+				return (len);
+				i++;
 			}
+		 /* frm % skip to next char to ignore 2nd%*/
 			else /* we got % and next char is not null or % */
 			{
 				f = spec_struct(format[i + 1]);
