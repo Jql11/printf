@@ -5,26 +5,53 @@ _printf \- print formatted output
 .B int _printf(const char *format, ...);
 .SH DESCRIPTION
 .B _printf
-This is a variadic function that produces output according to a format as described below.
+is a variadic function that produces output according to a format as described below.
 .B _printf
-writes output to stdout, the sandard output stream; it writes the output under the control of a format string that specifies how subsequent arguments are converted for output.
+writes output to stdout, the standard output stream, similar to the printf in the C standard library; it writes the output under the control of a format string that specifies how subsequent arguments are converted for output.
 .SH Format of the format string
-The format string is a character string, beginning and ending in its initial shift state, if any. The format string is composed of zero or more directives: ordinary  characters (not %), which are copied unchanged to the output stream; and conversion specifications, each of which results in fetching zero or more subsequent arguments. Each conversion specification is introduced by the character %, and ends with a conversion specifier.
+The format is a character string which contains three types of objects:
+ordinary characters (not %), enclosed in double quotes,
+which are copied unchanged to the output stream;
+character escape sequences which are converted and copied to the standard output (for example \n will print a new line);
+and conversion specifications, each of which results in fetching zero or more subsequent arguments.
+Each conversion specification is introduced by the character %, and ends with a conversion specifier.
 .SH Conversion specifiers
 .TP
-.BR di
-The int arguments is convereted to signed decimal notation.
+.BR d,i
+Signed decimal integer.
+.TP
+.BR u
+Unsigned decimal integer.
+.TP
+.BR o
+Unsigned integer in octal.
+.TP
+.BR x, X
+Unsigned interger as a hexidecimal number. x uses lower-case letters and upper-case.
+.TP
+.BR b
+Unsigned int argument is converted to binary.
 .TP
 .BR c
-If no l modifier is present, the int argument is convereted to an unsigned char, and the resulting characters is written.
+Char (character).
 .TP
 .BR s
-If no l modifier is present, the const char* argument is expected to be a pointer to an array of character type )pointer to a string). Characters from the array are written up to (bur not including) a terminating null nyte ('\0).
+Null-terminated string.
+Characters from the array are printed up to (but not including) a terminating null nyte ('\0).
 .TP
 .BR %
 A % is written. No argument is converted. The complete conversion specification is %%. 
+.TP
+.BR r
+Print a string in reverse.
+.TP
+.BR R
+Print the string encoded using ROT13.
 .SH RETURN VALUE
 Upon successful return,
 .B _printf
 return the number of characters printed (excluding the null byte used to end output to strings).
-If an output error is encountered, a negative value is returned;
+If an output error is encountered, a negative value is returned.
+.SH BUGS
+.B _printf
+contrary to the C standard library function printf does not handle eEfFgGaAp conversion specifiers and none of the flag characters, length and precision modifiers. 
