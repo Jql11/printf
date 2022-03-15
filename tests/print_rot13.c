@@ -14,6 +14,9 @@ int print_rot(va_list ap)
 	char *b = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	int i, j;
 
+	if (str == '\0')
+		return (0);
+
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (str[i] < 'A' || str[i] > 'Z' && str[i] < 'a' || str[i] > 'z')
