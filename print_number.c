@@ -82,17 +82,3 @@ int print_int(va_list ap)
 
 	return (length);
 }
-/**
-  *print_unsigned_int- print 0 or positive integer
-  *@ap: arguments
-  *Return: count characters
-  */
-int print_unsigned_int(va_list ap)
-{
-	unsigned int n = va_arg(ap, int);
-	unsigned int length;
-
-	length = print_number(n);
-
-	return (length);
-}
