@@ -19,7 +19,8 @@ int print_rot(va_list ap)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (str[i] < 'A' || str[i] > 'Z' && str[i] < 'a' || str[i] > 'z')
+		if ((str[i] < 'A' || str[i] > 'Z') &&
+		    (str[i] < 'a' || str[i] > 'z'))
 			_putchar(str[i]);
 		else
 		{
