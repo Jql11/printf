@@ -20,6 +20,7 @@ int (*spec_struct(char ch))(va_list)
 		{'u', print_unsigned_int},
 		{'b', print_binary},
 /*		{'o', print_oct}, */
+		{'r', print_rev},
 		{'R', print_rot},
 		{'\0', NULL}
 	};
