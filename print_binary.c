@@ -13,7 +13,7 @@ int print_binary(va_list ap)
 	n = va_arg(ap, unsigned int);
 	if (n == 0)
 	{
-		_putchar(‘0’);
+		_putchar('0');
 		return (1);
 	}
 	while (n > 0)
